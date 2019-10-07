@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "description": "Icon generator",
   "scripts": {
-    "generate": "ts-node ./scripts/generate",
     "dev": "nodemon",
-    "prebuild": "npm run generate",
-    "build": "docz build",
+    "build:icons": "ts-node ./scripts/generate.tsx",
+    "copy:lib": "cpy ./lib/ ./docs/src --parents",
+    "build:docs": "cd docs && npm run build",
+    "clean:docs": "rimraf public",
+    "copy:docs": "move-cli docs/build ./public --parents",
+    "build": "npm-run-all build:icons copy:lib build:docs clean:docs copy:docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,12 +28,16 @@
     "@types/node": "^12.7.11",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
-    "docz": "latest",
-    "docz-theme-default": "^1.2.0",
+    "cpy-cli": "^2.0.0",
     "fs-extra": "^8.1.0",
+    "i": "^0.3.6",
+    "move-cli": "^1.2.1",
     "nodemon": "^1.19.3",
+    "npm": "^6.11.3",
+    "npm-run-all": "^4.1.5",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "rimraf": "^3.0.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
   }
