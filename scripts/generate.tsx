@@ -33,4 +33,7 @@ function createIcon(componentName: string, element: React.ReactElement) {
   );
 }
 
+createIcon("ArrowUp", <AngledArrow angle={90} />);
+createIcon("ArrowRight", <AngledArrow angle={0} />);
 createIcon("ArrowDown", <AngledArrow angle={270} />);
+createIcon("ArrowLeft", <AngledArrow angle={180} />);

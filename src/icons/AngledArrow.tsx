@@ -15,23 +15,21 @@ export default function AngledArrow({ angle }: AngledArrowProps) {
   function getArrowPoints() {
     const arrowLength = (iconGridSize - 2 * margin) / 2;
 
-    const offsetX =
-      -1 * (Math.cos(degreesToRadians(angle)) * (arrowLength / 2));
-    const offsetY =
-      -1 * (Math.sin(degreesToRadians(angle)) * (arrowLength / 2));
+    const offsetX = -1 * Math.cos(degreesToRadians(angle)) * (arrowLength / 2);
+    const offsetY = -1 * Math.sin(degreesToRadians(angle)) * (arrowLength / 2);
+
+    console.log(offsetX);
 
     const centerPoint: Point = {
-      x: offsetX + Math.cos(degreesToRadians(angle)) * arrowLength,
-      y: offsetY + -1 * Math.sin(degreesToRadians(angle)) * arrowLength
+      x: Math.cos(degreesToRadians(angle)) * arrowLength + offsetX,
+      y: -1 * Math.sin(degreesToRadians(angle)) * arrowLength - offsetY
     };
 
     const beginningPoint: Point = {
       x:
-        offsetX +
         centerPoint.x +
         arrowLength * Math.cos(degreesToRadians(180 + angle - arrowAngle / 2)),
       y:
-        offsetY +
         centerPoint.y +
         -1 *
           arrowLength *
@@ -40,23 +38,17 @@ export default function AngledArrow({ angle }: AngledArrowProps) {
 
     const endPoint: Point = {
       x:
-        offsetX +
         centerPoint.x +
         arrowLength * Math.cos(degreesToRadians(180 + angle + arrowAngle / 2)),
       y:
-        offsetY +
+        // -1 * offsetY +
         centerPoint.y +
         -1 *
           arrowLength *
           Math.sin(degreesToRadians(180 + angle + arrowAngle / 2))
     };
 
-    return pointsToLineString([
-      beginningPoint,
-      centerPoint,
-      endPoint,
-      centerPoint
-    ]);
+    return pointsToLineString([beginningPoint, centerPoint, endPoint]);
   }
 
   return (
