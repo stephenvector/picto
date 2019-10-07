@@ -1,0 +1,37 @@
+{
+  "name": "picto",
+  "version": "0.1.0",
+  "description": "Icon generator",
+  "scripts": {
+    "generate": "ts-node ./scripts/generate",
+    "dev": "nodemon",
+    "prebuild": "npm run generate",
+    "build": "docz build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenvector/picto.git"
+  },
+  "author": "Stephen Vector",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephenvector/picto/issues"
+  },
+  "homepage": "https://github.com/stephenvector/picto#readme",
+  "devDependencies": {
+    "@svgr/core": "^4.3.3",
+    "@types/fs-extra": "^8.0.0",
+    "@types/node": "^12.7.11",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "docz": "latest",
+    "docz-theme-default": "^1.2.0",
+    "fs-extra": "^8.1.0",
+    "nodemon": "^1.19.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
