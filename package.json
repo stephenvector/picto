@@ -6,7 +6,7 @@
     "dev": "nodemon",
     "build:icons": "ts-node ./scripts/generate.tsx",
     "copy:lib": "cpy ./lib/ ./docs/src --parents",
-    "build:docs": "cd docs && npm run build",
+    "build:docs": "cd docs && npm install && npm run build",
     "clean:docs": "rimraf public",
     "copy:docs": "move-cli docs/build ./public --parents",
     "build": "npm-run-all build:icons copy:lib build:docs clean:docs copy:docs",
