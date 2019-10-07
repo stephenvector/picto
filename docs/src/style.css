@@ -9,11 +9,13 @@ html {
 }
 
 body {
+  text-align: center;
   background: #fff;
   color: #000;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-weight: 400;
+  font-family: "Barlow", sans-serif;
 }
 
 .App {
@@ -23,5 +25,6 @@ body {
 }
 
 h1 {
+  font-weight: 700;
   margin: 0 1rem 0 0;
 }

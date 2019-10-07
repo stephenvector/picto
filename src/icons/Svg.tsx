@@ -12,8 +12,8 @@ function Svg({ children }: SvgProps) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`${(-1 * iconGridSize) / 2} ${(-1 * iconGridSize) /
         2} ${iconGridSize} ${iconGridSize}`}
-      width={320}
-      height={320}
+      width={32}
+      height={32}
     >
       {children}
     </svg>
