@@ -12,13 +12,9 @@ import Plus from "../src/icons/Plus";
 import Cancel from "../src/icons/Cancel";
 
 const libPath = path.resolve(__dirname, "../lib");
-const svgPath = path.resolve(libPath, "./svg");
-const componentsPath = path.resolve(libPath, "./components");
 
 // Ensure output directory exists and is empty
 fs.emptyDirSync(path.resolve(libPath));
-fs.emptyDirSync(svgPath);
-fs.emptyDirSync(componentsPath);
 
 function createIcon(componentName: string, element: React.ReactElement) {
   const svgCode = ReactDOMServer.renderToStaticMarkup(
@@ -27,14 +23,7 @@ function createIcon(componentName: string, element: React.ReactElement) {
     </IconSettingsContext.Provider>
   );
 
-  const jsxCode = svgr.sync(svgCode, { icon: true }, { componentName });
-
-  fs.writeFileSync(path.resolve(svgPath, `${componentName}.svg`), svgCode);
-
-  fs.writeFileSync(
-    path.resolve(componentsPath, `${componentName}.js`),
-    jsxCode
-  );
+  fs.writeFileSync(path.resolve(libPath, `${componentName}.svg`), svgCode);
 }
 
 createIcon("ArrowUp", <AngledArrow angle={90} />);

@@ -3,19 +3,19 @@ import ReactDOM from "react-dom";
 
 import "./style.css";
 
-import ArrowUp from "./lib/components/ArrowUp";
-import ArrowRight from "./lib/components/ArrowRight";
-import ArrowDown from "./lib/components/ArrowDown";
-import ArrowLeft from "./lib/components/ArrowLeft";
-import Minus from "./lib/components/Minus";
-import Plus from "./lib/components/Plus";
-import Cancel from "./lib/components/Cancel";
+import ArrowUp from "./lib/ArrowUp.svg";
+import ArrowRight from "./lib/ArrowRight.svg";
+import ArrowDown from "./lib/ArrowDown.svg";
+import ArrowLeft from "./lib/ArrowLeft.svg";
+import Minus from "./lib/Minus.svg";
+import Plus from "./lib/Plus.svg";
+import Cancel from "./lib/Cancel.svg";
 
 function App() {
   return (
     <div className="App">
       <h1>picto</h1>
-      <p>svg & react componnent icons that are generated, not drawn</p>
+      <p>svg icons that are generated, not drawn</p>
       <p>
         <ArrowUp />
       </p>
