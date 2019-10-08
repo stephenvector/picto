@@ -7,6 +7,9 @@ import ArrowUp from "./lib/components/ArrowUp";
 import ArrowRight from "./lib/components/ArrowRight";
 import ArrowDown from "./lib/components/ArrowDown";
 import ArrowLeft from "./lib/components/ArrowLeft";
+import Minus from "./lib/components/Minus";
+import Plus from "./lib/components/Plus";
+import Cancel from "./lib/components/Cancel";
 
 function App() {
   return (
@@ -24,6 +27,15 @@ function App() {
       </p>
       <p>
         <ArrowLeft />
+      </p>
+      <p>
+        <Minus />
+      </p>
+      <p>
+        <Plus />
+      </p>
+      <p>
+        <Cancel />
       </p>
     </div>
   );

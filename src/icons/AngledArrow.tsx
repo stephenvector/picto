@@ -7,18 +7,23 @@ type AngledArrowProps = {
   angle: number;
 };
 
-export default function AngledArrow({ angle }: AngledArrowProps) {
+export default function AngledArrow({
+  angle,
+  ...otherProps
+}: AngledArrowProps) {
   const { margin, iconGridSize, arrowAngle, color, strokeWidth } = useContext(
     IconSettingsContext
   );
 
   function getArrowPoints() {
-    const arrowLength = (iconGridSize - 2 * margin) / 2;
+    let size = iconGridSize / 2 - margin - strokeWidth;
+
+    size = Math.sqrt(size * size + size * size);
+
+    const arrowLength = size * 2;
 
     const offsetX = -1 * Math.cos(degreesToRadians(angle)) * (arrowLength / 2);
     const offsetY = -1 * Math.sin(degreesToRadians(angle)) * (arrowLength / 2);
-
-    console.log(offsetX);
 
     const centerPoint: Point = {
       x: Math.cos(degreesToRadians(angle)) * arrowLength + offsetX,
@@ -41,7 +46,6 @@ export default function AngledArrow({ angle }: AngledArrowProps) {
         centerPoint.x +
         arrowLength * Math.cos(degreesToRadians(180 + angle + arrowAngle / 2)),
       y:
-        // -1 * offsetY +
         centerPoint.y +
         -1 *
           arrowLength *
@@ -52,7 +56,7 @@ export default function AngledArrow({ angle }: AngledArrowProps) {
   }
 
   return (
-    <Svg>
+    <Svg {...otherProps}>
       <polyline
         strokeLinecap="round"
         strokeLinejoin="round"

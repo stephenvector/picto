@@ -2,7 +2,6 @@ import { createContext } from "react";
 
 export type IconSettings = {
   iconGridSize: number;
-  lineThickness: number;
   color: string;
   margin: number;
   arrowAngle: number;
@@ -10,12 +9,11 @@ export type IconSettings = {
 };
 
 export const defaultSettings: IconSettings = {
-  iconGridSize: 32,
-  lineThickness: 2,
+  iconGridSize: 64,
   color: "#000",
-  margin: 2,
+  margin: 8,
   arrowAngle: 90,
-  strokeWidth: 2
+  strokeWidth: 6
 };
 
 export const IconSettingsContext = createContext<IconSettings>(defaultSettings);
