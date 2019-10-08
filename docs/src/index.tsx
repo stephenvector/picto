@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <h1>picto</h1>
-      <p>Icons generated from formulas.</p>
+      <p>svg & react componnent icons that are generated, not drawn</p>
       <p>
         <ArrowUp />
       </p>

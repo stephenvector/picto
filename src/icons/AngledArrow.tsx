@@ -20,7 +20,7 @@ export default function AngledArrow({
 
     size = Math.sqrt(size * size + size * size);
 
-    const arrowLength = size * 2;
+    const arrowLength = size * 1.3;
 
     const offsetX = -1 * Math.cos(degreesToRadians(angle)) * (arrowLength / 2);
     const offsetY = -1 * Math.sin(degreesToRadians(angle)) * (arrowLength / 2);
