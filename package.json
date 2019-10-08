@@ -12,6 +12,9 @@
     "build": "npm-run-all build:icons copy:lib build:docs clean:docs copy:docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "./lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stephenvector/picto.git"
