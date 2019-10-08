@@ -1,7 +1,7 @@
 {
-  "name": "picto",
+  "name": "@stephenvector/picto",
   "version": "0.1.0",
-  "description": "Icon generator",
+  "description": "Generated customized SVG & React component icons.",
   "scripts": {
     "dev": "nodemon",
     "build:icons": "ts-node ./scripts/generate.tsx",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/stephenvector/picto.git"
   },
   "author": "Stephen Vector",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/stephenvector/picto/issues"
   },
@@ -30,7 +30,6 @@
     "@types/react-dom": "^16.9.1",
     "cpy-cli": "^2.0.0",
     "fs-extra": "^8.1.0",
-    "i": "^0.3.6",
     "move-cli": "^1.2.1",
     "nodemon": "^1.19.3",
     "npm": "^6.11.3",
