@@ -1,6 +1,6 @@
 {
   "name": "@stephenvector/picto",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generated customized SVG & React component icons.",
   "scripts": {
     "dev": "nodemon",
