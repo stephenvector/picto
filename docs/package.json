@@ -34,6 +34,6 @@
     ]
   },
   "devDependencies": {
-    "@stephenvector/picto": "^0.1.5"
+    "@stephenvector/picto": "^0.1.7"
   }
 }
