@@ -3,13 +3,15 @@ import ReactDOM from "react-dom";
 
 import "./style.css";
 
-import ArrowUp from "./lib/ArrowUp.svg";
-import ArrowRight from "./lib/ArrowRight.svg";
-import ArrowDown from "./lib/ArrowDown.svg";
-import ArrowLeft from "./lib/ArrowLeft.svg";
-import Minus from "./lib/Minus.svg";
-import Plus from "./lib/Plus.svg";
-import Cancel from "./lib/Cancel.svg";
+import {
+  ArrowUp,
+  ArrowRight,
+  ArrowDown,
+  ArrowLeft,
+  Minus,
+  Plus,
+  Cancel
+} from "@stephenvector/picto";
 
 function App() {
   return (
