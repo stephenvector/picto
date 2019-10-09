@@ -1,2 +1,8 @@
 docs
 public
+now.json
+dist
+nodemon.json
+tsconfig.json
+global.d.ts
+
