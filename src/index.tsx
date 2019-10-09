@@ -35,10 +35,7 @@ const libPath = path.resolve(__dirname, "../lib");
 // Ensure output directory exists and is empty
 fs.emptyDirSync(path.resolve(libPath));
 
-require("@babel/core").transform("code", {
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-  plugins: ["@babel/plugin-transform-modules-commonjs"]
-});
+fs.ensureFileSync(path.resolve(libPath, "index.js"));
 
 function createIcon(componentName: string, element: React.ReactElement) {
   const svgCode = ReactDOMServer.renderToStaticMarkup(
@@ -50,15 +47,26 @@ function createIcon(componentName: string, element: React.ReactElement) {
   const jsxCode = svgr.sync(svgCode, { icon: true }, { componentName });
 
   const cjsCode = transform(jsxCode, {
-    presets: ["@babel/preset-env", "@babel/preset-react"]
+    sourceMaps: "inline",
+
+    presets: ["@babel/preset-react", "@babel/preset-env"],
+    plugins: ["transform-es2015-modules-commonjs"]
   });
 
+  fs.emptyDirSync(path.resolve(libPath, `${componentName}/`));
+
   if (cjsCode !== null) {
+    fs.appendFileSync(
+      path.resolve(libPath, `./index.js`),
+      `export { default as ${componentName} } from "./${componentName}";`
+    );
+
     fs.writeFileSync(
-      path.resolve(libPath, `${componentName}.js`),
+      path.resolve(libPath, `${componentName}/index.js`),
       cjsCode.code
     );
   }
+
   fs.writeFileSync(path.resolve(libPath, `${componentName}.svg`), svgCode);
 }
 
@@ -69,3 +77,17 @@ createIcon("ArrowLeft", <AngledArrow angle={180} />);
 createIcon("Minus", <Minus />);
 createIcon("Plus", <Plus />);
 createIcon("Cancel", <Cancel />);
+
+const indexFileContent = fs
+  .readFileSync(path.resolve(libPath, "index.js"))
+  .toString();
+
+const cjsCode = transform(indexFileContent, {
+  sourceMaps: "inline",
+  presets: ["@babel/preset-react", "@babel/preset-env"],
+  plugins: ["transform-es2015-modules-commonjs"]
+});
+
+if (cjsCode !== null) {
+  fs.writeFileSync(path.resolve(libPath, `./index.js`), cjsCode.code);
+}
