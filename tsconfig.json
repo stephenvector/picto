@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "strict": false,
+    "strict": true,
     "jsx": "react",
     "esModuleInterop": true,
     "target": "es6",
-    "module": "commonjs"
-  }
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "exclude": ["docs", "lib", "node_modules", "public", "dist"]
 }

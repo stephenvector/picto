@@ -3,3 +3,4 @@ lib
 .docz
 /public
 docs/src/lib
+dist
