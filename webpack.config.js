@@ -32,10 +32,5 @@ module.exports = {
       inlineSource: ".(css)$"
     }),
     new HtmlWebpackInlineSourcePlugin()
-  ],
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    }
-  }
+  ]
 };
