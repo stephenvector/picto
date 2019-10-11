@@ -21,6 +21,8 @@ import {
 } from "../src";
 import { IconConfig } from "../src/types";
 
+import "./index.css";
+
 const inverseConfig: IconConfig = {
   color: "#fff",
   capStyle: "round",
