@@ -19,15 +19,6 @@ function RadioInactive() {
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
-      <line
-        x1={gridSize / 2}
-        y1={strokeWidth}
-        x2={gridSize / 2}
-        y2={gridSize - strokeWidth}
-        stroke={color}
-        strokeLinecap={capStyle}
-        strokeWidth={strokeWidth}
-      />
     </svg>
   );
 }
