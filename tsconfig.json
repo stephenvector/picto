@@ -3,9 +3,10 @@
     "jsx": "react",
     "esModuleInterop": true,
     "outDir": "lib",
-    "module": "commonjs",
     "declaration": true,
-    "strict": true
+    "strict": true,
+    "module": "commonjs"
   },
-  "include": ["src/**/*"]
+  "include": ["src/*.tsx"],
+  "exclude": ["node_modules/**"]
 }
