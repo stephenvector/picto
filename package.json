@@ -8,8 +8,10 @@
     "build:docs": "webpack",
     "build:lib": "tsc",
     "build": "npm run build:docs",
+    "eslint": "eslint src/**/*",
     "dev": "webpack-dev-server",
-    "prepublish": "npm run build:lib"
+    "prepublish": "npm run build:lib",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,14 +29,23 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^24.0.18",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react-hooks": "^2.1.2",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
     "install": "^0.13.0",
+    "jest": "^24.9.0",
     "npm": "^6.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -46,6 +57,32 @@
     "webpack-dev-server": "^3.8.2"
   },
   "peerDependencies": {
-    "react": "^16.10.2"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx",
+      "node"
+    ],
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ],
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
