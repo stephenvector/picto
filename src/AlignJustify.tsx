@@ -22,7 +22,7 @@ function AlignJustify() {
       />
       <line
         x1={strokeWidth}
-        y1={strokeWidth + (gridSize - 2 * strokeWidth)/4}
+        y1={strokeWidth + (gridSize - 2 * strokeWidth) / 4}
         x2={gridSize - strokeWidth}
         y2={strokeWidth + (gridSize / 2 - strokeWidth) / 2}
         stroke={color}

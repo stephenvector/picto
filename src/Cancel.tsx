@@ -12,14 +12,16 @@ function Cancel() {
       height={size}
     >
       <polyline
-        points={`${strokeWidth*2},${strokeWidth*2} ${gridSize-strokeWidth*2},${gridSize-strokeWidth*2}`}
+        points={`${strokeWidth * 2},${strokeWidth * 2} ${gridSize -
+          strokeWidth * 2},${gridSize - strokeWidth * 2}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
       <polyline
-        points={`${strokeWidth*2},${gridSize - strokeWidth*2} ${gridSize-strokeWidth*2},${strokeWidth*2}`}
+        points={`${strokeWidth * 2},${gridSize - strokeWidth * 2} ${gridSize -
+          strokeWidth * 2},${strokeWidth * 2}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}

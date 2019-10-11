@@ -15,7 +15,7 @@ function Menu() {
         y1={gridSize / 2 - 4 * strokeWidth}
         x1={strokeWidth}
         y2={gridSize / 2 - 4 * strokeWidth}
-        x2={gridSize-strokeWidth}
+        x2={gridSize - strokeWidth}
         stroke={color}
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
@@ -24,7 +24,7 @@ function Menu() {
         y1={gridSize / 2}
         x1={strokeWidth}
         y2={gridSize / 2}
-        x2={gridSize-strokeWidth}
+        x2={gridSize - strokeWidth}
         stroke={color}
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
@@ -33,12 +33,11 @@ function Menu() {
         y1={gridSize / 2 + 4 * strokeWidth}
         x1={strokeWidth}
         y2={gridSize / 2 + 4 * strokeWidth}
-        x2={gridSize-strokeWidth}
+        x2={gridSize - strokeWidth}
         stroke={color}
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
-
     </svg>
   );
 }

@@ -2,8 +2,15 @@ import React from "react";
 import { useIconConfig } from "./IconContext";
 
 function ArrowUp() {
-  const { size, gridSize, strokeWidth, capStyle, color, lineJoin } = useIconConfig();
-  const offset = (gridSize - (2 * strokeWidth)) / 4;
+  const {
+    size,
+    gridSize,
+    strokeWidth,
+    capStyle,
+    color,
+    lineJoin
+  } = useIconConfig();
+  const offset = (gridSize - 2 * strokeWidth) / 4;
 
   return (
     <svg
@@ -13,7 +20,9 @@ function ArrowUp() {
       height={size}
     >
       <polyline
-        points={`${strokeWidth},${gridSize/2 + offset} ${gridSize/2},${strokeWidth + offset} ${gridSize- strokeWidth},${gridSize/2 + offset}`}
+        points={`${strokeWidth},${gridSize / 2 + offset} ${gridSize /
+          2},${strokeWidth + offset} ${gridSize - strokeWidth},${gridSize / 2 +
+          offset}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}

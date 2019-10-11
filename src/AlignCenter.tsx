@@ -21,9 +21,9 @@ function AlignCenter() {
         strokeWidth={strokeWidth}
       />
       <line
-        x1={strokeWidth + (gridSize - 2 * strokeWidth)/4}
-        y1={strokeWidth + (gridSize - 2 * strokeWidth)/4}
-        x2={strokeWidth + (gridSize - 2 * strokeWidth)/4*3}
+        x1={strokeWidth + (gridSize - 2 * strokeWidth) / 4}
+        y1={strokeWidth + (gridSize - 2 * strokeWidth) / 4}
+        x2={strokeWidth + ((gridSize - 2 * strokeWidth) / 4) * 3}
         y2={strokeWidth + (gridSize / 2 - strokeWidth) / 2}
         stroke={color}
         strokeLinecap={capStyle}
@@ -39,9 +39,9 @@ function AlignCenter() {
         strokeWidth={strokeWidth}
       />
       <line
-        x1={strokeWidth + (gridSize - 2 * strokeWidth)/4}
+        x1={strokeWidth + (gridSize - 2 * strokeWidth) / 4}
         y1={gridSize / 2 + (gridSize / 2 - strokeWidth) / 2}
-        x2={strokeWidth + (gridSize - 2 * strokeWidth)/4*3}
+        x2={strokeWidth + ((gridSize - 2 * strokeWidth) / 4) * 3}
         y2={gridSize / 2 + (gridSize / 2 - strokeWidth) / 2}
         stroke={color}
         strokeLinecap={capStyle}

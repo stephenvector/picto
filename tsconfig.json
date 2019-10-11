@@ -4,7 +4,8 @@
     "esModuleInterop": true,
     "outDir": "lib",
     "module": "commonjs",
-    "declaration": true
+    "declaration": true,
+    "strict": true
   },
   "include": ["src/**/*"]
 }

@@ -29,7 +29,6 @@ function RadioActive() {
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
-      
     </svg>
   );
 }

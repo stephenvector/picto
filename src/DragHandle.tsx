@@ -3,7 +3,7 @@ import { useIconConfig } from "./IconContext";
 
 function DragHandle() {
   const { size, gridSize, strokeWidth, capStyle, color } = useIconConfig();
-  const offset = (gridSize - (2 * strokeWidth)) / 4;
+  const offset = (gridSize - 2 * strokeWidth) / 4;
 
   return (
     <svg
@@ -13,21 +13,24 @@ function DragHandle() {
       height={size}
     >
       <polyline
-        points={`${strokeWidth},${gridSize/2 - strokeWidth*2} ${gridSize-strokeWidth},${gridSize/2 - strokeWidth*2}`}
+        points={`${strokeWidth},${gridSize / 2 - strokeWidth * 2} ${gridSize -
+          strokeWidth},${gridSize / 2 - strokeWidth * 2}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
       <polyline
-        points={`${strokeWidth},${gridSize/2} ${gridSize-strokeWidth},${gridSize/2}`}
+        points={`${strokeWidth},${gridSize / 2} ${gridSize -
+          strokeWidth},${gridSize / 2}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
       <polyline
-        points={`${strokeWidth},${gridSize/2 + strokeWidth*2} ${gridSize-strokeWidth},${gridSize/2+ strokeWidth*2}`}
+        points={`${strokeWidth},${gridSize / 2 + strokeWidth * 2} ${gridSize -
+          strokeWidth},${gridSize / 2 + strokeWidth * 2}`}
         stroke={color}
         fill="none"
         strokeLinecap={capStyle}

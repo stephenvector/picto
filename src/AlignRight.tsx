@@ -21,7 +21,7 @@ function AlignRight() {
         strokeWidth={strokeWidth}
       />
       <line
-        x1={gridSize/2}
+        x1={gridSize / 2}
         y1={strokeWidth + (gridSize / 2 - strokeWidth) / 2}
         x2={gridSize - strokeWidth}
         y2={strokeWidth + (gridSize / 2 - strokeWidth) / 2}
@@ -39,7 +39,7 @@ function AlignRight() {
         strokeWidth={strokeWidth}
       />
       <line
-        x1={gridSize/2}
+        x1={gridSize / 2}
         y1={gridSize / 2 + (gridSize / 2 - strokeWidth) / 2}
         x2={gridSize - strokeWidth}
         y2={gridSize / 2 + (gridSize / 2 - strokeWidth) / 2}
