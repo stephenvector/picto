@@ -56,7 +56,14 @@ function Icons() {
 
 function Docs() {
   return (
-    <div>
+    <div className="Docs">
+      <header>
+        <h1>picto</h1>
+        <p>react icons that are generated using simple geometry, not drawn</p>
+        <a href="https://github.com/stephenvector/picto">
+          View source on GitHub
+        </a>
+      </header>
       <IconProvider value={inverseConfig}>
         <Icons />
       </IconProvider>

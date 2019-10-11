@@ -15,18 +15,28 @@ body {
   font-family: "Barlow", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.InverseContainer {
+  color: #fff;
   background: #000;
-  padding: 30rem 10rem;
 }
 
 svg {
   margin: 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.Docs {
+  max-width: 1200px;
+}
+
+header {
+  padding: 3rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 6rem;
 }
