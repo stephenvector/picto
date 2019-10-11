@@ -2,11 +2,14 @@
   "name": "@stephenvector/picto",
   "version": "0.1.8",
   "description": "svg icons that are generated, not drawn",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build:docs": "webpack",
     "build:lib": "tsc",
     "build": "npm run build:docs",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prepublish": "npm run build:lib"
   },
   "repository": {
     "type": "git",
@@ -40,6 +43,9 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
+    "react": "^16.10.2"
+  },
+  "peerDependencies": {
     "react": "^16.10.2"
   }
 }

@@ -3,7 +3,8 @@
     "jsx": "react",
     "esModuleInterop": true,
     "outDir": "lib",
-    "module": "commonjs"
+    "module": "commonjs",
+    "declaration": true
   },
   "include": ["src/**/*"]
 }
