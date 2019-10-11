@@ -3,9 +3,10 @@
   "version": "0.1.7",
   "description": "svg icons that are generated, not drawn",
   "scripts": {
-    "build": "tsc",
-    "dev": "webpack-dev-server",
-    "docs": "./node_modules/.bin/babel docs/index.tsx --extensions .ts,.tsx --out-dir public"
+    "build:docs": "webpack",
+    "build:lib": "tsc",
+    "build": "npm run build:docs",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,16 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
-    "react": "^16.10.2",
+    "install": "^0.13.0",
+    "npm": "^6.12.0",
     "react-dom": "^16.10.2",
     "style-loader": "^1.0.0",
     "ts-loader": "^6.2.0",
@@ -34,8 +40,6 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "@babel/preset-typescript": "^7.6.0"
+    "react": "^16.10.2"
   }
 }
