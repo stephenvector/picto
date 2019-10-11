@@ -1,6 +1,6 @@
 {
   "name": "@stephenvector/picto",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "svg icons that are generated, not drawn",
   "scripts": {
     "build:docs": "webpack",
