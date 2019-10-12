@@ -1,6 +1,6 @@
 {
   "name": "@stephenvector/picto",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "svg icons that are generated, not drawn",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
