@@ -16,8 +16,7 @@ import {
   Menu,
   RadioActive,
   RadioInactive,
-  IconProvider,
-  DefaultIconContext
+  IconProvider
 } from "../src";
 import { IconConfig } from "../src/types";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useIconConfig } from "./IconContext";
 
-function RadioInactive() {
+export default function RadioInactive() {
   const { size, gridSize, strokeWidth, capStyle, color } = useIconConfig();
 
   return (
@@ -22,5 +22,3 @@ function RadioInactive() {
     </svg>
   );
 }
-
-export default RadioInactive;

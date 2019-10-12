@@ -1,7 +1,7 @@
 import React from "react";
 import { useIconConfig } from "./IconContext";
 
-function Menu() {
+export default function Menu() {
   const { size, gridSize, strokeWidth, capStyle, color } = useIconConfig();
 
   return (
@@ -23,5 +23,3 @@ function Menu() {
     </svg>
   );
 }
-
-export default Menu;
