@@ -10,7 +10,6 @@
     "build": "npm run build:docs",
     "eslint": "eslint src/**/*",
     "dev": "webpack-dev-server",
-    "prepublish": "npm run build:lib",
     "test": "jest"
   },
   "repository": {
@@ -84,5 +83,8 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ]
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
