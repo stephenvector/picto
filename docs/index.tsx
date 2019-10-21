@@ -16,24 +16,15 @@ import {
   Menu,
   RadioActive,
   RadioInactive,
-  IconProvider
+  IconProvider,
+  defaultIconContext
 } from "../src";
-import { IconConfig } from "../src/types";
 
 import "./index.css";
 
-const inverseConfig: IconConfig = {
-  color: "#fff",
-  capStyle: "round",
-  gridSize: 128,
-  size: "3em",
-  strokeWidth: 8,
-  lineJoin: "round"
-};
-
 function Icons() {
   return (
-    <div>
+    <div className="Icons">
       <AlignCenter />
       <AlignJustify />
       <AlignLeft />
@@ -63,9 +54,56 @@ function Docs() {
           View source on GitHub
         </a>
       </header>
-      <IconProvider value={inverseConfig}>
+
+      <IconProvider theme={defaultIconContext}>
         <Icons />
       </IconProvider>
+
+      <div>
+        <pre>
+          <code>{`
+npm install --save @stephenvector/picto
+
+import {
+  AlignCenter,
+  AlignJustify,
+  AlignLeft,
+  AlignRight,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  ArrowUp,
+  Cancel,
+  DragHandle,
+  Plus,
+  Minus,
+  Menu,
+  RadioActive,
+  RadioInactive,
+  IconProvider,
+  defaultIconContext
+} from "@stephenvector/picto";
+
+// Override attributes by creating a customized theme
+type IconConfig = {
+  capStyle: "round" | "square";
+  gridSize: number;
+  color: string;
+  size: number | string;
+  strokeWidth: number;
+  lineJoin: "round" | "bevel" | "miter" | "inherit";
+};
+
+const customTheme = {...defaultIconContext};
+
+customTheme.color = "004
+
+<IconProvider theme={customTheme}>
+  <AlignLeft />
+</IconProvider>
+`}</code>
+        </pre>
+      </div>
     </div>
   );
 }

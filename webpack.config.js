@@ -5,6 +5,9 @@ module.exports = {
   mode: "production",
   watch: false,
   entry: "./docs/index.tsx",
+  devServer: {
+    port: 3000
+  },
   output: {
     path: path.resolve(__dirname, "public")
   },

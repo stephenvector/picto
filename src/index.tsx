@@ -1,3 +1,12 @@
+export type IconConfig = {
+  capStyle: "round" | "square";
+  gridSize: number;
+  color: string;
+  size: number | string;
+  strokeWidth: number;
+  lineJoin: "round" | "bevel" | "miter" | "inherit";
+};
+
 export { default as AlignCenter } from "./AlignCenter";
 export { default as AlignJustify } from "./AlignJustify";
 export { default as AlignLeft } from "./AlignLeft";
@@ -15,5 +24,4 @@ export { default as Menu } from "./Menu";
 export { default as Move } from "./Move";
 export { default as RadioActive } from "./RadioActive";
 export { default as RadioInactive } from "./RadioInactive";
-export { DefaultIconContext, useIconConfig, IconProvider } from "./IconContext";
-export { IconConfig } from "./types.d";
+export { defaultIconContext, useIconConfig, IconProvider } from "./IconContext";

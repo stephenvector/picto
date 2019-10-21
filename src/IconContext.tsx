@@ -1,9 +1,9 @@
-import { createContext, useContext } from "react";
-import { IconConfig } from "./types";
+import React, { createContext, useContext } from "react";
+import { IconConfig } from "./";
 
 const IconContext = createContext<IconConfig | undefined>(undefined);
 
-export const DefaultIconContext: IconConfig = {
+export const defaultIconContext: IconConfig = {
   color: "#000",
   capStyle: "round",
   gridSize: 128,
@@ -16,10 +16,22 @@ export function useIconConfig() {
   const iconContextValue = useContext(IconContext);
 
   if (iconContextValue === undefined) {
-    return DefaultIconContext;
+    return defaultIconContext;
   }
 
   return iconContextValue;
 }
 
-export const IconProvider = IconContext.Provider;
+export function IconProvider({
+  theme,
+  children
+}: {
+  theme: IconConfig;
+  children: React.ReactNode;
+}) {
+  return <IconContext.Provider value={theme}>{children}</IconContext.Provider>;
+}
+
+IconProvider.defaultProps = {
+  theme: defaultIconContext
+};

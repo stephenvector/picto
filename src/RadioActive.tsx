@@ -16,6 +16,7 @@ function RadioActive() {
         cy={gridSize / 2}
         r={gridSize / 2 - strokeWidth}
         stroke={color}
+        fill="none"
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
@@ -23,7 +24,7 @@ function RadioActive() {
       <circle
         cx={gridSize / 2}
         cy={gridSize / 2}
-        r={gridSize / 2 - 4 * strokeWidth}
+        r={gridSize / 2 - 3 * strokeWidth}
         stroke={color}
         fill={color}
         strokeLinecap={capStyle}

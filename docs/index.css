@@ -15,8 +15,8 @@ body {
   font-family: "Barlow", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #fff;
 }
 
 svg {
@@ -28,15 +28,21 @@ a {
   text-decoration: underline;
 }
 
-.Docs {
-  max-width: 1200px;
-}
-
 header {
   padding: 3rem;
+}
+
+pre {
+  padding: 3rem;
+  background: #f2f2f2;
 }
 
 h1 {
   margin: 0;
   font-size: 6rem;
+}
+
+.Docs {
+  padding: 3rem;
+  max-width: 1200px;
 }

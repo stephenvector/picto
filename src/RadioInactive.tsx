@@ -16,6 +16,7 @@ export default function RadioInactive() {
         cy={gridSize / 2}
         r={gridSize / 2 - strokeWidth}
         stroke={color}
+        fill={"none"}
         strokeLinecap={capStyle}
         strokeWidth={strokeWidth}
       />
