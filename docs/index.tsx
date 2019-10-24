@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import {
   AlignCenter,
   AlignJustify,
@@ -21,6 +24,21 @@ import {
 } from "../src";
 
 import "./index.css";
+
+const customTheme = { ...defaultIconContext };
+
+customTheme.color = "#00b";
+customTheme.size = "8rem";
+customTheme.capStyle = "square";
+customTheme.strokeWidth = 6;
+
+function Code({ code, language = "tsx" }: { code: string; language?: string }) {
+  return (
+    <SyntaxHighlighter language={language} style={prism}>
+      {code}
+    </SyntaxHighlighter>
+  );
+}
 
 function Icons() {
   return (
@@ -49,7 +67,10 @@ function Docs() {
     <div className="Docs">
       <header>
         <h1>picto</h1>
-        <p>react icons that are generated using simple geometry, not drawn</p>
+        <p>
+          Customizable React icon components. Generated using simple geometry,
+          not drawn.
+        </p>
         <a href="https://github.com/stephenvector/picto">
           View source on GitHub
         </a>
@@ -60,29 +81,37 @@ function Docs() {
       </IconProvider>
 
       <div>
-        <pre>
-          <code>{`
-npm install --save @stephenvector/picto
+        <h2>Installation</h2>
+        <Code code={`npm install --save @stephenvector/picto@latest`} />
+      </div>
 
-import {
-  AlignCenter,
-  AlignJustify,
-  AlignLeft,
-  AlignRight,
-  ArrowDown,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  Cancel,
-  DragHandle,
-  Plus,
-  Minus,
-  Menu,
-  RadioActive,
-  RadioInactive,
-  IconProvider,
-  defaultIconContext
-} from "@stephenvector/picto";
+      <div>
+        <h2>Usage</h2>
+        <Code
+          code={`// App.js
+
+import { AlignCenter } from "@stephenvector/picto";
+
+export default function App() {
+  return (
+    <div>
+      <AlignCenter /> Align Center
+    </div>
+  )
+}
+`}
+        />
+
+        <h2>Customization</h2>
+        <Code
+          code={`export const defaultIconContext: IconConfig = {
+  color: "#000",
+  capStyle: "round",
+  gridSize: 128,
+  size: "1em",
+  strokeWidth: 9,
+  lineJoin: "round"
+};
 
 // Override attributes by creating a customized theme
 type IconConfig = {
@@ -96,13 +125,50 @@ type IconConfig = {
 
 const customTheme = {...defaultIconContext};
 
-customTheme.color = "004
+customTheme.color = "#00b";
+customTheme.size = "8rem";
+customTheme.capStyle = "square";
+customTheme.strokeWidth = 6;
 
 <IconProvider theme={customTheme}>
+  <AlignCenter />
+  <AlignJustify />
   <AlignLeft />
+  <AlignRight />
+  <ArrowDown />
+  <ArrowLeft />
+  <ArrowRight />
+  <ArrowUp />
+  <Cancel />
+  <DragHandle />
+  <Plus />
+  <Minus />
+  <Menu />
+  <RadioActive />
+  <RadioInactive />
 </IconProvider>
-`}</code>
-        </pre>
+`}
+        />
+        <p>
+          <strong>Preview:</strong>
+        </p>
+        <IconProvider theme={customTheme}>
+          <AlignCenter />
+          <AlignJustify />
+          <AlignLeft />
+          <AlignRight />
+          <ArrowDown />
+          <ArrowLeft />
+          <ArrowRight />
+          <ArrowUp />
+          <Cancel />
+          <DragHandle />
+          <Plus />
+          <Minus />
+          <Menu />
+          <RadioActive />
+          <RadioInactive />
+        </IconProvider>
       </div>
     </div>
   );
