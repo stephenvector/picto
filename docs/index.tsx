@@ -31,6 +31,7 @@ customTheme.color = "#00b";
 customTheme.size = "8rem";
 customTheme.capStyle = "square";
 customTheme.strokeWidth = 6;
+customTheme.background = "#f5f2f0 !important";
 
 function Code({ code, language = "tsx" }: { code: string; language?: string }) {
   return (
