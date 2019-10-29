@@ -26,7 +26,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: require("html-webpack-template"),
-      appMountId: "root"
+      appMountId: "root",
+      title: "Picto"
     })
   ]
 };
